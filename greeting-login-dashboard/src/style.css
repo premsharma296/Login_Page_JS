@@ -1,0 +1,192 @@
+/* Base Reset and Theme */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #fce4ec);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
+  animation: fadeInBody 1s ease-in-out;
+}
+
+/* Fade in the body on load */
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Main Container */
+.app {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Greeting Section */
+.greeting {
+  margin-bottom: 30px;
+  animation: slideUp 0.7s ease-in-out;
+}
+
+.greeting h1 {
+  font-size: 2em;
+  color: #333;
+  animation: bounceIn 0.8s ease;
+}
+
+.greeting p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.login-form input {
+  padding: 12px 16px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Buttons */
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px) scale(1.03);
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Welcome Section */
+.welcome {
+  margin-top: 30px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.welcome h1 {
+  font-size: 1.8em;
+  color: #333;
+  animation: popIn 0.6s ease-in-out;
+}
+
+/* User List Styling */
+.user-list {
+  margin-top: 20px;
+  text-align: left;
+  animation: fadeIn 0.6s ease;
+}
+
+.user-list h3 {
+  color: #444;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.user-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-list li {
+  padding: 6px 12px;
+  margin: 4px 0;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.user-list li:hover {
+  background-color: #e0e0e0;
+  transform: translateX(6px);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8) translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
